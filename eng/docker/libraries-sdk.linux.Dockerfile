@@ -21,7 +21,7 @@ RUN rm -rf /usr/share/dotnet
 
 # Install latest daily SDK:
 RUN wget https://builds.dotnet.microsoft.com/dotnet/scripts/v1/dotnet-install.sh
-RUN bash ./dotnet-install.sh --channel $_DOTNET_INSTALL_CHANNEL --quality daily --install-dir /usr/share/dotnet
+RUN bash ./dotnet-install.sh --channel $_DOTNET_INSTALL_CHANNEL --quality daily --verbose --install-dir /usr/share/dotnet
 
 # Collect the following artifacts under /live-runtime-artifacts,
 # so projects can build and test against the live-built runtime:
