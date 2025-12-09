@@ -7,6 +7,7 @@ SHELL ["pwsh", "-Command"]
 
 WORKDIR /app
 COPY . .
+WORKDIR /app/System.Net.Http/tests/StressTests/HttpStress
 
 ARG VERSION=9.0
 ARG CONFIGURATION=Release
