@@ -4,7 +4,6 @@ services:
     build:
       context: ../../../../ # ~> src/libraries
       dockerfile: ./System.Net.Http/tests/StressTests/HttpStress/${DOCKERFILE:-Dockerfile}
-    image: httpstress
     volumes:
       - "${DUMPS_SHARE}:${DUMPS_SHARE_MOUNT_ROOT}"
     links:
@@ -17,7 +16,6 @@ services:
     build:
       context: ../../../../ # ~> src/libraries
       dockerfile: ./System.Net.Http/tests/StressTests/HttpStress/${DOCKERFILE:-Dockerfile}
-    image: httpstress
     volumes:
       - "${DUMPS_SHARE}:${DUMPS_SHARE_MOUNT_ROOT}"
     ports:
